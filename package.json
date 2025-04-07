@@ -1,7 +1,7 @@
 {
     "name": "project-work-backend",
     "version": "1.0.0",
-    "main": "server.js",
+    "main": "src/api/index.js",
     "scripts": {
         "start": "node src/api/index.js",
         "dev": "nodemon src/api/index.js"
