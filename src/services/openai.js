@@ -54,7 +54,7 @@ async function generateGiftSuggestions(recipient) {
     return response.gifts.map((gift, index) => ({
       ...gift,
       id: `gift-${index + 1}`,
-      image: `https://source.unsplash.com/800x600/?${encodeURIComponent(gift.imageQuery)}`,
+      image: `https://source.unsplash.com/800x600/?${encodeURIComponent(gift.imageUrl)}`,
       link: `https://www.google.com/search?q=${encodeURIComponent(gift.name)}`,
     }));
   } catch (error) {
