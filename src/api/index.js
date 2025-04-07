@@ -14,8 +14,8 @@ const app = express();
 // Middleware
 app.use(cors(
   {
-      origin : {"https://gift-recommendation-frontend.vercel.app/"},
-      methods : {"POST", "GET"},
+      origin : ["https://gift-recommendation-frontend.vercel.app/"],
+      methods : ["POST", "GET"],
       credentials : true
   }
 ));
