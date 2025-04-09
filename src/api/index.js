@@ -40,9 +40,9 @@ app.use((err, req, res, next) => {
 //   console.log(`Server running on port ${PORT}`);
 // });
 
-// app.get("/", (req, res) => {
-//   console.log("Get request");
-// });
+app.get("/", (req, res) => {
+  res.json("Backend is Running Successfully");
+});
 
 
 module.exports = app;
