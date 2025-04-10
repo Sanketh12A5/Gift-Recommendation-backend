@@ -70,12 +70,6 @@ async function generateGiftSuggestions(recipient) {
 
     const response = JSON.parse(completion.choices[0].message.content || '{"gifts": []}');
 
-    // return response.gifts.map((gift, index) => ({
-    //   ...gift,
-    //   id: `gift-${index + 1}`,
-    //   image: `https://source.unsplash.com/800x600/?${encodeURIComponent(gift.imageUrl)}`,
-    //   link: `https://www.google.com/search?q=${encodeURIComponent(gift.name)}`,
-    // }));
     const giftsWithImages = await Promise.all(
       response.gifts.map(async (gift, index) => {
         const image = await fetchUnsplashImage(gift.name);
