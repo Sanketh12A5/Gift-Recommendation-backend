@@ -83,7 +83,7 @@ async function generateGiftSuggestions(recipient) {
           ...gift,
           id: `gift-${index + 1}`,
           imageUrl: image || `https://via.placeholder.com/400x300?text=${encodeURIComponent(gift.name)}`,
-          link: `https://www.google.com/search?q=${encodeURIComponent(gift.name)}`,
+          link: `https://www.amazon.in/s?k=${encodeURIComponent(gift.name)}`,
         };
       })
     );
